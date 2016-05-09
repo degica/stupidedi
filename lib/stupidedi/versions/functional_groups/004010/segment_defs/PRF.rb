@@ -12,6 +12,8 @@ module Stupidedi
             "Contains data about the purchase order being filled by this ASN",
             e::E324.simple_use(r::Mandatory,  s::RepeatCount.bounded(1)),
             e::E328.simple_use(r::Mandatory,  s::RepeatCount.bounded(1)),
+            # there is another optional element here, not sure what so just duplicating previous one...
+            e::E328.simple_use(r::Optional,   s::RepeatCount.bounded(1)),
             e::E373.simple_use(r::Mandatory,  s::RepeatCount.bounded(1)))
         end
       end
